@@ -1,4 +1,15 @@
 # Starter pipeline
+- task: Application security testing@2024
+  inputs:
+    projectName: 'NodeGoatcopy'
+    enableProxy: false
+    enableSastScan: true
+    enableSastBranching: false
+    preset: 'All'
+    overrideProjectSettings: true
+    generatePDFReport: true
+    enableDependencyScan: true
+    isEnableScaResolver: true
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
