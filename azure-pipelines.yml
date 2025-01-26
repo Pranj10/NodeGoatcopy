@@ -6,16 +6,14 @@ pool:
 
 steps:
 - task: ApplicationSecurityTesting@2024
-  inputs:
-    projectName: 'NodeGoatcopy'
-    enableProxy: false
-    enableSastScan: true
-    enableSastBranching: false
-    preset: 'All'
-    overrideProjectSettings: true
-    generatePDFReport: true
-    enableDependencyScan: true
-    isEnableScaResolver: true
+inputs:
+  projectName: 'NodeGoatcopy'
+  enableProxy: false
+  enableSastScan: true
+  enableSastBranching: false
+  preset: 'All'
+  overrideProjectSettings: true
+  generatePDFReport: true
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
