@@ -17,9 +17,9 @@ steps:
 - task: Application security testing@2024
   inputs:
     projectName: 'NodeGoatcopy'
-    enableProxy: true
+    enableProxy: false
     enableSastScan: true
-    enableSastBranching: true
+    enableSastBranching: false
     masterBranchProjectName: 'NodeGoatcopy'
     preset: 'All'
     overrideProjectSettings: true
