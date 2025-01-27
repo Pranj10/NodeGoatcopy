@@ -14,15 +14,18 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
 - task: Application security testing@2024
   inputs:
+    
+    enableSastScan: true
+    CheckmarxService: 'My_SAST'
+    enableSastBranching: false
+    enableDependencyScan: false
     projectName: 'NodeGoatcopy'
     enableProxy: false
-    enableSastScan: true
-    enableSastBranching: false
     masterBranchProjectName: 'NodeGoatcopy'
     preset: 'All'
     overrideProjectSettings: true
     generatePDFReport: true
-    enableDependencyScan: false
-  
+    
