@@ -26,6 +26,5 @@ steps:
     enableProxy: false
     masterBranchProjectName: 'NodeGoatcopy'
     preset: 'All'
-    overrideProjectSettings: true
-    generatePDFReport: true
-    
+    fullTeamName: '/CxServer'
+
