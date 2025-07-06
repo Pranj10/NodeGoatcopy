@@ -1,24 +1,10 @@
 trigger:
-- task: Application security testing@2024
-  inputs:
-    enableProxy: false
-    enableSastScan: true
-    enableSastBranching: false
-    enableDependencyScan: true
-    isEnableScaResolver: true
-    pathToScaResolver: 'C:\Users\PranjaliM\OneDrive - Checkmarx\Desktop\Integrations\SCA resolver\ast-cli_2.3.5_windows_x64'
-    scaEnablePolicyViolations: true
-    scaVulnerabilityThreshold: true
-    scaCritical: '10'
-    scaHigh: '10'
 - master
 
 pool:
       name: Default
 
 steps:
-
-
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
