@@ -18,7 +18,6 @@ steps:
   inputs:
     enableProxy: false
     enableSastScan: true
-    CheckmarxService: 'My_SAST'
     enableSastBranching: false
     preset: 'High and Medium'
     incScan: false
