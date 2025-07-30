@@ -16,14 +16,14 @@ steps:
  
 - task: Application security testing@2025
   inputs:
-    projectName: 'NodeGoatcopy'
     enableProxy: false
     enableSastScan: true
+    CheckmarxService: 'My_SAST'
     enableSastBranching: false
-    preset: 'All'
+    preset: 'High and Medium'
     incScan: false
+    generatePDFReport: true
     enableDependencyScan: false
-
 - task: Checkmarx AST@3
   displayName: 'Run Checkmarx AST Scan'
   inputs:
