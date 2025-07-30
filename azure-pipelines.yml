@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-      name: Default
+  name: Default
 
 steps:
 
@@ -13,13 +13,19 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-
-- task: Application security testing@2024
+ 
+- task: Application security testing@2025
   inputs:
-    
+    projectName: 'NodeGoatcopy'
+    enableProxy: false
     enableSastScan: true
-    CheckmarxService: 'My_SAST'
+    enableSastBranching: false
+    preset: 'All'
+    incScan: false
+    enableDependencyScan: false
+
 - task: Checkmarx AST@3
+  displayName: 'Run Checkmarx AST Scan'
   inputs:
     projectName: 'NodeGoatcopy'
     branchName: '$(Build.SourceBranchName)'
