@@ -19,11 +19,9 @@ steps:
     
     enableSastScan: true
     CheckmarxService: 'My_SAST'
-    enableSastBranching: false
-    enableDependencyScan: false
+- task: Checkmarx AST@3
+  inputs:
     projectName: 'NodeGoatcopy'
-    enableProxy: false
-    masterBranchProjectName: 'NodeGoatcopy'
-    preset: 'All'
-    fullTeamName: '/CxServer'
+    branchName: '$(Build.SourceBranchName)'
+    tenantName: 'ast_abdul_ansari'
 
