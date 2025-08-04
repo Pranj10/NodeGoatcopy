@@ -23,5 +23,6 @@ steps:
     enableSastBranching: false
     preset: 'All'
     incScan: false
+    team: '\CxServer\SP\YourTeamName'
     generatePDFReport: true
     enableDependencyScan: false
