@@ -32,11 +32,9 @@ steps:
     projectName: 'NodeGoatcopy'
     enableProxy: false
     enableSastScan: true
+    CheckmarxService: 'CxEndpointlatest'
     enableSastBranching: false
-    preset: 'Error handling'
+    preset: 'All'
     incScan: false
     generatePDFReport: true
-    vulnerabilityThreshold: true
-    critical: '10'
-    high: '10'
     enableDependencyScan: false
