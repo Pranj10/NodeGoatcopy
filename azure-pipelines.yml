@@ -32,10 +32,11 @@ steps:
     projectName: 'NodeGoatcopy'
     enableProxy: false
     enableSastScan: true
-    CheckmarxService: 'My_SAST'
     enableSastBranching: false
-    preset: 'XSS and SQLi only'
-    engineConfigId: '0'
+    preset: 'Error handling'
     incScan: false
     generatePDFReport: true
+    vulnerabilityThreshold: true
+    critical: '10'
+    high: '10'
     enableDependencyScan: false
