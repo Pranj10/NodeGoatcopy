@@ -26,3 +26,16 @@ steps:
     preset: 'High and Medium'
     incScan: false
     generatePDFReport: true
+
+- task: Application security testing@2025
+  inputs:
+    projectName: 'NodeGoatcopy'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: 'My_SAST'
+    enableSastBranching: false
+    preset: 'XSS and SQLi only'
+    engineConfigId: '0'
+    incScan: false
+    generatePDFReport: true
+    enableDependencyScan: false
