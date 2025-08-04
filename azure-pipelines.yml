@@ -14,19 +14,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: Checkmarx AST@3
-  displayName: 'Run Checkmarx AST Scan'
-  inputs:
-    projectName: 'NodeGoatcopy'
-    branchName: '$(Build.SourceBranchName)'
-    tenantName: 'ast_abdul_ansari'
-    enableProxy: false
-    enableSastScan: true
-    enableSastBranching: false
-    preset: 'High and Medium'
-    incScan: false
-    generatePDFReport: true
-
 - task: Application security testing@2025
   inputs:
     projectName: 'NodeGoatcopy'
