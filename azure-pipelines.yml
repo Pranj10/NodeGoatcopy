@@ -3,17 +3,19 @@ trigger:
 
 pool:
   name: Default
-
 steps:
-    - task: Application security testing@2025
-      inputs:
-        projectName: 'NodeGoatcopy'
-        enableProxy: false
-        enableSastScan: true
-        CheckmarxService: 'CxEndpointlatest'
-        enableSastBranching: false
-        preset: 'All'
-        fullTeamName: 'CxServer'
-        incScan: false
-        generatePDFReport: true
-        enableDependencyScan: false
+- task: Application security testing@2025
+  inputs:
+    projectName: 'NodeGoatcopy'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: 'My_SAST'
+    enableSastBranching: false
+    preset: 'All'
+    fullTeamName: 'CxServer'
+    incScan: false
+    generatePDFReport: true
+    vulnerabilityThreshold: true
+    critical: '10'
+    high: '10'
+    enableDependencyScan: false
