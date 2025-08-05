@@ -13,7 +13,7 @@ steps:
         CheckmarxService: 'CxEndpointlatest'
         enableSastBranching: false
         preset: 'All'
-        fullTeamName: 'CxServer\'
+        fullTeamName: 'CxServer'
         incScan: false
         generatePDFReport: true
         enableDependencyScan: false
