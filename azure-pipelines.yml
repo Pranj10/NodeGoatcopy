@@ -5,24 +5,15 @@ pool:
   name: Default
 
 steps:
-
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-- task: Application security testing@2025
-  inputs:
-    projectName: 'NodeGoatcopy'
-    enableProxy: false
-    enableSastScan: true
-    CheckmarxService: 'CxEndpointlatest'
-    enableSastBranching: false
-    preset: 'All'
-    incScan: false
-    team: '\CxServer\SP\YourTeamName'
-    generatePDFReport: true
-    enableDependencyScan: false
+    - task: Application security testing@2025
+      inputs:
+        projectName: 'NodeGoatcopy'
+        enableProxy: false
+        enableSastScan: true
+        CheckmarxService: 'CxEndpointlatest'
+        enableSastBranching: false
+        preset: 'All'
+        fullTeamName: 'CxServer\'
+        incScan: false
+        generatePDFReport: true
+        enableDependencyScan: false
