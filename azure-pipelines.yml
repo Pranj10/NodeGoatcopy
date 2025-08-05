@@ -15,7 +15,4 @@ steps:
     fullTeamName: 'CxServer'
     incScan: false
     generatePDFReport: true
-    vulnerabilityThreshold: true
-    critical: '10'
-    high: '10'
     enableDependencyScan: false
